@@ -14,7 +14,33 @@ public class Task7 {
     }
     int maxSide = maxValuePositionInArray(intArray);
     kindOfTriangle(intArray, maxSide);
+    typeOfAngle(intArray, maxSide);
+  }
 
+  private static void typeOfAngle(int[] intArray, int maxSide) {
+    if (isPossibleToBuild(intArray, maxSide)) {
+      if (intArray[maxSide] == intArray[0]) {
+        if (Math.pow(intArray[0], 2) < Math.pow(intArray[1], 2) + Math.pow(intArray[2], 2)) {
+          System.out.println("Triangle has acute angle.");
+        } else {
+          System.out.println("Triangle is obtuse.");
+        }
+      }
+      if (intArray[maxSide] == intArray[1]) {
+        if (Math.pow(intArray[1], 2) < Math.pow(intArray[0], 2) + Math.pow(intArray[2], 2)) {
+          System.out.println("Triangle has acute angle.");
+        } else {
+          System.out.println("Triangle is obtuse.");
+        }
+      }
+      if (intArray[maxSide] == intArray[2]) {
+        if (Math.pow(intArray[2], 2) < Math.pow(intArray[1], 2) + Math.pow(intArray[0], 2)) {
+          System.out.println("Triangle has acute angle.");
+        } else {
+          System.out.println("Triangle is obtuse.");
+        }
+      }
+    }
   }
 
   private static void kindOfTriangle(int[] intArray, int maxSide) {
