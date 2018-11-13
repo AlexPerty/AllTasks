@@ -6,7 +6,7 @@ import java.lang.reflect.Array;
 /**
  * Created by Perty on 09-Nov-18.
  */
-public class task3_4 {
+public class Task3_4 {
   public static void main(String[] args) throws IOException {
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     int intArray[] = new int[3];
